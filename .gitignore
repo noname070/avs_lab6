@@ -1,0 +1,5 @@
+solution/
+**/target/
+**/.vscode/
+
+.DS_STORE
