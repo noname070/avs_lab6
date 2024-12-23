@@ -17,15 +17,15 @@ public class Config {
     public static final String DB_ROOT_PASSWORD = "supertoppassword337";
 
     public static final Integer APP_PORT = 3292;
-    public static final String APP_HOST = "lab7-server";
-    // static {
-    //     try {
-    //         APP_HOST = InetAddress.getByName("lab7-server").getHostAddress();
-    //         System.out.println("App host: " + APP_HOST);
-    //     } catch (UnknownHostException e) {
-    //         log.error("Ошибка с определением хоста", e);
-    //         System.exit(1);
-    //     }
-    // }
+    public static String APP_HOST = "lab7-server";
+    static {
+        try {
+            APP_HOST = InetAddress.getByName("lab7-server").getHostAddress();
+            System.out.println("App host: " + APP_HOST);
+        } catch (UnknownHostException e) {
+            log.error("Ошибка с определением хоста", e);
+            System.exit(1);
+        }
+    }
 
 }
